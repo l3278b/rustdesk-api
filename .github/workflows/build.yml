@@ -57,7 +57,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/checkout@v4
         with:
-          repository: lejianwen/rustdesk-api-web
+          repository: l3278b/rustdesk-api-web
           path: rustdesk-api-web
           ref: master
 
@@ -159,8 +159,6 @@ jobs:
       matrix:
         job:
           - { platform: "amd64", goos: "linux", debian_platform: "amd64", crossbuild_package: ""}
-          - { platform: "arm64", goos: "linux", debian_platform: "arm64", crossbuild_package: "crossbuild-essential-arm64" }
-          - { platform: "armv7l", goos: "linux", debian_platform: "armhf", crossbuild_package: "crossbuild-essential-armhf" }
     steps:
 
       - name: Checkout
